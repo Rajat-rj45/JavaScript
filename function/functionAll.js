@@ -60,3 +60,23 @@ const arrowGreet = (name) => `Hello, ${name}`;
 console.log(arrowGreet("Arrow Function")); // Output: "Hello, Arnold"
 
 
+// what is higher order function?
+function applyFunction(fn, arg) {
+  return fn(arg);
+}
+function square(n) {
+ return n * n;
+}
+console.log(applyFunction(square, 5)); // Outputs: 25
+
+// map funtion
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(number => number * number);
+
+console.log(squaredNumbers); // Outputs: [1, 4, 9, 16, 25]
+
+// filter function 
+const numbers1 = [1, 2, 3, 4, 5];
+const oddNumbers = numbers1.filter(number => number % 2 !== 0);
+
+console.log(oddNumbers); // Outputs: [1, 3, 5]
